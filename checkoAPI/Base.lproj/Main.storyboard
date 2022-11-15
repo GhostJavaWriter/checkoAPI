@@ -60,14 +60,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="yqB-Zu-NYV">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="yqB-Zu-NYV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3qP-Bg-9gN"/>
                             <constraint firstItem="zcq-cX-iWn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="79r-h2-CRW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zcq-cX-iWn" secondAttribute="trailing" constant="44" id="ATw-d5-c3s"/>
                             <constraint firstItem="zcq-cX-iWn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="FXJ-fm-Umj"/>
                             <constraint firstItem="kKR-2R-EH5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QyX-hA-d6h"/>
+                            <constraint firstItem="yqB-Zu-NYV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SBT-Ip-ykq"/>
                             <constraint firstItem="zcq-cX-iWn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="jmg-Lf-Y3P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kKR-2R-EH5" secondAttribute="bottom" constant="30" id="mYl-lZ-fXa"/>
                             <constraint firstItem="kKR-2R-EH5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="njC-iC-iM1"/>
@@ -75,6 +80,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="yqB-Zu-NYV" id="0X6-Ih-mma"/>
                         <outlet property="checkButton" destination="AHk-rz-PPC" id="vlr-og-k5Y"/>
                         <outlet property="inputTextField" destination="Y5G-C5-S2y" id="Amh-wf-DsN"/>
                         <outlet property="outputInfo" destination="kKR-2R-EH5" id="UDU-2D-Wru"/>
