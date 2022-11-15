@@ -11,5 +11,5 @@ struct ContactsModel: Decodable {
     
     let Тел: [String]?
     let Емэйл: [String]?
-    let ВебСайт: [String]?
+    let ВебСайт: String?
 }

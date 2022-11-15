@@ -23,12 +23,10 @@ class ViewController: UIViewController {
     
     private var viewModel = ViewModel()
     
-    
     // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
     }
     
