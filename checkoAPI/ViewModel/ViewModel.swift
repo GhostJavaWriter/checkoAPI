@@ -10,17 +10,21 @@ import Foundation
 class ViewModel {
     
     private var networkManager = NetworkManager()
-    private var result: ResultData?
+    private var data: ResultData?
     
     func fetchResult(with inn: String, completion: @escaping () -> Void) {
-        networkManager.fetchResult(with: inn, completion: { [weak self] result in
-            self?.result = result
+        networkManager.fetchResult(with: inn, completion: { [weak self] result, error in
+            if error != nil {
+                return
+            }
+            
+            self?.data = result
             completion()
         })
     }
     
     func getCompanyName() -> String {
-        guard let result = result else { return "<<error>>"}
+        guard let result = data else { return "<<error>>"}
         return result.data.НаимСокр
     }
 }
